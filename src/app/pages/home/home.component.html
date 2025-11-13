@@ -1,0 +1,9 @@
+<div>
+  <div class="flex-col justify-center flex items-center">
+    <h1 class="text-6xl mt-5 mb-5">Recherche de films</h1>
+    <app-search-bar (search)="searchMovies($event)"></app-search-bar>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
+    <app-movie-card *ngFor="let movie of movies" [movie]="movie"></app-movie-card>
+  </div>
+</div>
