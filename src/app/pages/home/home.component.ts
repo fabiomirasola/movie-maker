@@ -18,9 +18,11 @@ export class HomeComponent {
   constructor(private movieService: MovieService) {}
 
   searchMovies(searchTerm: string) {
-    if (!searchTerm) return;
-    this.movieService.searchMovies(searchTerm).subscribe((res: any) => {
-      this.movies = res.Search || [];
-    });
-  }
+  if (!searchTerm) return;
+
+  this.movieService.getMoviesWithDetails(searchTerm).subscribe((movies: any[]) => {
+    this.movies = movies;
+    console.log(this.movies); 
+  });
+}
 }
