@@ -1,20 +1,30 @@
-
-<nav class="flex justify-center space-x-8 p-7 text-cyan-50 shadow-2xl" style="background-color: #2d2e48;">
-  <a routerLink="/" routerLinkActive="text-white bg-blue-500" [routerLinkActiveOptions]="{ exact: true }" 
-    class="inline-flex items-center gap-1 border border-gray-400 rounded-3xl p-2 transition-colors duration-500 "
+<nav class="flex justify-center items-center space-x-4 p-6 backdrop-blur-md bg-white/5 border-b border-white/10">
+  <a 
+    routerLink="/" 
+    routerLinkActive="bg-gradient-to-r from-violet-500 to-purple-600 text-white shadow-lg shadow-purple-500/50 scale-105" 
+    [routerLinkActiveOptions]="{ exact: true }" 
+    class="group inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg font-medium"
   >
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:rotate-12 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
       <path d="M3 9.75L12 3l9 6.75v10.5A2.25 2.25 0 0118.75 21H5.25A2.25 2.25 0 013 20.25V9.75z"/>
     </svg>
-    Home
+    <span>Home</span>
   </a>
-  <a routerLink="/favorites" routerLinkActive="text-white bg-blue-500" 
-    class="inline-flex items-center gap-1 border border-gray-400 rounded-3xl p-2 transition-colors duration-500 ">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+  
+  <a 
+    routerLink="/favorites" 
+    routerLinkActive="bg-gradient-to-r from-pink-500 to-rose-600 text-white shadow-lg shadow-pink-500/50 scale-105" 
+    class="group inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg font-medium"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
       <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
     </svg>
-    Favorites
+    <span>Favorites</span>
   </a>
 </nav>
 
-<router-outlet></router-outlet>
+<app-blob></app-blob>
+
+<main class="container mx-auto px-4 py-8">
+  <router-outlet></router-outlet>
+</main>
