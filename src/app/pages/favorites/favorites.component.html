@@ -1,1 +1,12 @@
-<p>favorites works!</p>
+<div *ngIf="favorites.length === 0" class="text-white">
+  Aucun favori pour l'instant.
+</div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 mt-4 justify-items-center">
+    <div *ngFor="let movie of favorites" class="movie-card">
+      <img [src]="movie.Poster" [alt]="movie.Title" />
+      <h2>{{ movie.Title }} ({{ movie.Year }})</h2>
+      <p>⭐ {{ movie.imdbRating }}</p>
+    </div>
+  </div>
+

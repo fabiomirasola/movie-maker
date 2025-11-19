@@ -22,7 +22,6 @@ export class HomeComponent {
 
   this.movieService.getMoviesWithDetails(searchTerm).subscribe((movies: any[]) => {
     this.movies = movies;
-    console.log(this.movies); 
   });
 }
 }
