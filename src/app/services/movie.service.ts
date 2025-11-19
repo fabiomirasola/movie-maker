@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { forkJoin ,map, Observable, switchMap } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class MovieService {
-  private apiKey = '236c83b1';
+  private apiKey = environment.omdbApiKey;
   private apiUrl = 'https://www.omdbapi.com/';
 
   constructor(private http: HttpClient) {}
